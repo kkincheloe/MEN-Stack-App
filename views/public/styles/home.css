@@ -1,18 +1,25 @@
 .about {
-    background-color: plum;
+    background-color: #fff;
     padding: 2rem;
-    border: 3px solid black;
-    text-align: center;
 }
 
 .about h2 {
-    font-size: 28;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .about p {
     margin-bottom: 1rem;
-    font-size: 23;
+}
+
+.featured-products {
+    background-color: #f7f7f7;
+    padding: 2rem;
+}
+
+.featured-products h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .product-grid {
@@ -28,12 +35,13 @@
     min-width: 300px;
     margin-bottom: 2rem;
     background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
 }
 
 figure {
-    height: 75px;
+    height: 70%;
 }
 
 .product-grid img {
@@ -43,17 +51,28 @@ figure {
 }
 
 figcaption {
-    height: 35%;
+    height: 30%;
     padding: 1rem 2rem 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.featured-info h3 {
+    font-size: calc(1em + 0.5vw);
+}
+
+.featured-info p {
+    font-size: calc(0.5rem + 0.5vw);
+}
+
 .customer {
-    background-image: url("https://www.veeforu.com/wp-content/uploads/2023/01/Cyan-color-gaming-background-hd.jpg");
+    background-image: url("https://3f4c2184e060ce99111b-f8c0985c8cb63a71df5cb7fd729edcab.ssl.cf2.rackcdn.com/media/16863/all-purposebreaddough.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 -100px; 
 }
 
+.about {
+    text-align: center;
+}

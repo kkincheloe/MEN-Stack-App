@@ -2,26 +2,27 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scrollbar-color: #333;
+    scrollbar-width: 10px;
 }
 
 
 body {
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
-    color: black;
-    background-color: lightskyblue;
+    color: #333;
+    background-color: lightgoldenrodyellow;
     min-height: 100vh;
 }
 
 a {
-    color: purple;
+    color: #333;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: none;
-    color: lightgray
+    text-decoration: underline;
 }
 
 header {
@@ -30,6 +31,7 @@ header {
     align-items: center;
     background-color: #fff;
     padding: 1rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -40,15 +42,9 @@ h1 a:hover {
     text-decoration: none;
 }
 
-nav {
-    background-color: gray;
-    opacity: 0.3;
-}
-
 nav ul {
     display: flex;
     list-style: none;
-    color: #FAF9F6
 }
 
 nav li:not(:last-child) {
@@ -56,7 +52,7 @@ nav li:not(:last-child) {
 }
 
 nav a {
-    font-size: 24;
+    font-size: 1.2rem;
 }
 
 .customer {
@@ -64,18 +60,23 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: lightgrey;
+    background-color: #e8f1f2;
     height: 40vh;
 }
 
 .customer h2 {
-    font-size: 28;
+    font-size: 3rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
+.customer h3 {
+    font-size: 2rem;
+    text-align: center;
+}
+
 .customer h4 {
-    font-size: 24;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -83,7 +84,7 @@ nav a {
     display: inline-block;
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    background-color: purple;
+    background-color: black;
     color: white;
     border: dotted;
     border-radius: 10px;
@@ -91,24 +92,29 @@ nav a {
 }
 
 .btn:hover {
-    background-color: plum;
+    background-color: lightblue;
 }
 
 
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: black;
-    opacity: 0.3;
+    background-color: #333;
     width: calc(100vw - 1rem);
 }
 
 footer * {
     color: lightgray;
+    opacity: 10;
 }
 
 footer ul {
     justify-content: center;
-    color: #FAF9F6;
+    color: black
 }
+
+nav {
+    background-color: azure;
+}
+
 
