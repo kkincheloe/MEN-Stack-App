@@ -1,0 +1,59 @@
+.about {
+    background-color: plum;
+    padding: 2rem;
+    border: 3px solid black;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 28;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    margin-bottom: 1rem;
+    font-size: 23;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.product-grid li {
+    width: calc(33% - 1rem);
+    min-width: 300px;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+figure {
+    height: 75px;
+}
+
+.product-grid img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+figcaption {
+    height: 35%;
+    padding: 1rem 2rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customer {
+    background-image: url("https://www.veeforu.com/wp-content/uploads/2023/01/Cyan-color-gaming-background-hd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -100px; 
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs', {title: `${item.name} | Gear`}) %>
+    <link rel="stylesheet" href="/styles/item-details.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div>
+        <img src="<%= item.photo %>">
+        <h2 class="item-name"><%= item.name %></h2>
+        <section>
+            <p><strong>Price:</strong> <%= item.price %></p>
+            <p><strong>Description:</strong> <%= item.description %></p>
+            <p><strong>Quantity:</strong> <% if (item.quantity === 0) { %>
+            <h1 style="color:red;">OUT OF STOCK</h1>
+                <% } else { %>
+                <h1 style="color:black;"><%= item.quantity %> </h1>
+                <% } %>
+                </p>
+            <% for (let itemReview of item.reviews) { %>
+            <p><strong>Reviews:</strong> <%= itemReview.reviewText %></p>
+            <%}%>
+        </section>
+
+        <section class="actions">
+            <button class="btn"><a href="/reviews/new/<%= item._id %>">Write A Review</a></button>
+            <button class="btn"><a href="/items/<%= item._id %>/edit">Edit</a></button>
+            <form method="POST" action="/items/<%= item._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
+            </form>
+        </section>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

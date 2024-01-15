@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs', {title: 'Featured Gear'}) %>
+    <link rel="stylesheet" href="/styles/item-index.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <section class="customer">
+        <h2>FEATURED</h2>
+        <h3>What's Popular</h3>
+    </section>
+
+    <main>
+        <section class="listings">
+            <ul>
+                <% for (let item of items) { %>
+                <li>
+                    <figure>
+                        <img src="<%= item.photo %>">
+                        <figcaption>
+                            <h4><%= item.name %></h4>
+                            <p>Price: $<%= item.price %></p>
+                            <p> Quantity:<%= item.quantity %><% if (item.quantity === 0) { %>
+                                <h1 style="color:red;">SOLD OUT</h1>
+                                    <% } else { %>
+                                    <h1 style="color:black;"><%= item.quantity %> </h1>
+                                    <% } %></p>
+                            <a href="/items/<%= item._id %>">Description</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

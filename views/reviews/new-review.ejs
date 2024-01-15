@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/header.ejs', {title: 'Write a Review | Geared Up Gaming'}) %>
+    <link rel="stylesheet" href="/styles/item-form.css">
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <section class="customer">
+        <h2>Reviews</h2>
+        <h4><i>You are writing a review for <a href="/items/<%= item._id %>"><%= item.name %></a></i></h4>
+    </section>
+
+    <form action="/reviews/create/<%= item._id %>" method="POST">
+        <label for="reviewerName">Your Name:</label><br>
+        <input type="text" id="reviewerName" name="reviewerName" required><br>
+
+        <label for="reviewText">Write:</label><br>
+        <textarea id="reviewText" name="reviewText" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/header.ejs', {title: 'Reviews | Geared Up Gaming'}) %>
+    <link rel="stylesheet" href="/styles/review-details.css">
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <section class="review">
+        <h1>Reviewer: <%= review.reviewerName %></h1>
+        <table>
+            <tr>
+                <th>
+                    <h2>Review:</h2>
+                </th>
+                <td>
+                    <h2><%= review.reviewText %></h2>
+                </td>
+            </tr>
+        </table>
+
+        <form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
+            <input class="btn" type="submit" value="Delete" />
+        </form>
+    </section>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>
