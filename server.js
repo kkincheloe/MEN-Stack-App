@@ -3,8 +3,8 @@
 require('dotenv').config()
 const path = require('path');
 const express = require('express');
-const livereload = require("livereload");
-const connectLiveReload = require("connect-livereload");
+//const livereload = require("livereload");
+//const connectLiveReload = require("connect-livereload");
 const methodOverride = require('method-override');
 
 /* Require the db connection, models, and seed data
@@ -24,13 +24,13 @@ const app = express();
 
 /* Configure the app to refresh the browser when nodemon restarts
 --------------------------------------------------------------- */
-const liveReloadServer = livereload.createServer();
-liveReloadServer.server.once("connection", () => {
-    // wait for nodemon to fully restart before refreshing the page
-    setTimeout(() => {
-        liveReloadServer.refresh("/");
-    }, 100);
-});
+// const liveReloadServer = livereload.createServer();
+// liveReloadServer.server.once("connection", () => {
+//     // wait for nodemon to fully restart before refreshing the page
+//     setTimeout(() => {
+//         liveReloadServer.refresh("/");
+//     }, 100);
+// });
 
 
 /* Configure the app (app.set)
@@ -42,7 +42,7 @@ app.set('views', path.join(__dirname, 'views'));
 /* Middleware (app.use)
 --------------------------------------------------------------- */
 app.use(express.static('public'))
-app.use(connectLiveReload());
+//app.use(connectLiveReload());
 // Body parser: used for POST/PUT/PATCH routes:
 // this will take incoming strings from the body that are URL encoded and parse them
 // into an object that can be accessed in the request parameter as a property called body (req.body).
@@ -64,12 +64,16 @@ app.get('/about', function (req, res) {
     res.render('about')
 });
 
-app.get('/seed', async (req, res) => {
-    const formerItems = await db.Item.deleteMany({})
+app.get('/seed', (req, res) => {
+    db.Item.deleteMany({})
+    .then(removedItems => {
     console.log(`Removed ${formerItems.deletedCount} items`)
-    const newItems = await db.Item.insertMany(db.seedItems)
+    db.Item.insertMany(db.seedItems)
+    .then(newItems => {
     console.log(`Added ${newItems.length} to the website`)
     res.json(newItems)
+})
+})
 })
 
 app.use('/items', itemsCtrl)

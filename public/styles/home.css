@@ -12,16 +12,6 @@
     margin-bottom: 1rem;
 }
 
-.featured-products {
-    background-color: #f7f7f7;
-    padding: 2rem;
-}
-
-.featured-products h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
 .product-grid {
     display: flex;
     flex-wrap: wrap;
@@ -67,10 +57,15 @@ figcaption {
 }
 
 .customer {
-    background-image: url("https://3f4c2184e060ce99111b-f8c0985c8cb63a71df5cb7fd729edcab.ssl.cf2.rackcdn.com/media/16863/all-purposebreaddough.jpg");
+    background-image: url("https://www.veeforu.com/wp-content/uploads/2023/01/Cyan-color-gaming-background-hd.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 -100px; 
+}    
+
+h2 {
+    background: white;
+    border-radius: 10px;
 }
 
 .about {

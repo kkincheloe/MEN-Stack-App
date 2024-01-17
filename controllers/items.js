@@ -47,6 +47,14 @@ router.put('/:id', (req, res) => {
         .then(item => res.redirect('/items/' + item._id))
 })
 
+router.get('/:id/buy', (req, res) => {
+    db.Product.updateOne(
+        {'_id': req.params.id},
+        { $inc: {quantity: -1}}
+    ).then( () => 
+        res.redirect('/products/' + req.params.id))
+    })
+
 // Destroy Route DELETE
 router.delete('/:id', (req, res) => {
     db.Item.findByIdAndDelete(req.params.id)
