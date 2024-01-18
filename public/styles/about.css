@@ -36,14 +36,16 @@ main {
 
 .customer {
     text-align: center;
-    background-image: url("https://www.starfrit.com/media/amasty/webp/contentmanager/content/cache/1070x1070/Bread_Dough_1_jpg.webp");
+    background-image: url("https://www.shutterstock.com/image-vector/abstract-neon-color-future-background-600nw-2229574275.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    color: rgb(253, 242, 150);
 }
 
-.customer h2 {
-    background-color: white;
-}
-.customer h4 {
-    background-color: white;
+footer {
+    margin-bottom: 0;
+    padding: 30px;
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 10px;
 }

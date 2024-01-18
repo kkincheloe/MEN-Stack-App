@@ -2,10 +2,10 @@ div {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    border: 1px solid #ccc;
+    
     padding: 20px;
     margin: 4vh auto;
-    box-shadow: 2px 2px 5px #ccc;
+    
 }
 
 img {
@@ -16,8 +16,14 @@ img {
     object-fit: cover;
     margin-bottom: 10px;
 }
+.photo {
+    margin-right: 20px;
+    margin-left: 200px;
+    
+   
+}
 
-.pet-name {
+.item-name {
     font-size: 32px;
     margin-bottom: 10px;
 }
@@ -30,6 +36,7 @@ section {
 p {
     font-size: 18px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 strong {

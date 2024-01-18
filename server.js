@@ -55,8 +55,9 @@ app.use(methodOverride('_method'));
 
 // Home
 app.get('/', async function (req, res) {
-    const items = await db.Item.find({name: true})
-    res.render('home', { items: items })
+    db.Item.find()
+    .then(items => res.render('home', { items: items })) 
+    
 });
 
 // About 
@@ -67,7 +68,7 @@ app.get('/about', function (req, res) {
 app.get('/seed', (req, res) => {
     db.Item.deleteMany({})
     .then(removedItems => {
-    console.log(`Removed ${formerItems.deletedCount} items`)
+    console.log(`Removed ${removedItems.deletedCount} items`)
     db.Item.insertMany(db.seedItems)
     .then(newItems => {
     console.log(`Added ${newItems.length} to the website`)

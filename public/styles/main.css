@@ -6,7 +6,6 @@
     scrollbar-width: 10px;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -84,18 +83,36 @@ nav a {
     display: inline-block;
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    background-color: black;
+    background-color: rgb(117, 124, 240);
     color: white;
-    border: dotted;
+    border: 3px solid white;
     border-radius: 10px;
     cursor: pointer;
+    width: 110px;
+    margin: 10px;
 }
 
 .btn:hover {
     background-color: lightblue;
 }
 
+/* Simplified grid styles */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
 
+.container li {
+    list-style: none;
+    text-align: center; /* Added text-align to center the content */
+}
+
+.item-info {
+    text-align: center;
+}
+
+/* The rest of your CSS remains unchanged */
 footer {
     text-align: center;
     padding: 1rem;
@@ -110,12 +127,38 @@ footer * {
 
 footer ul {
     justify-content: center;
-    color: black
+    color: black;
+}
+
+body {
+    background-color: rgb(122, 188, 231);
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border: 4px solid black;
+    border-radius: 100%;
+    display: flex;
+}
+
+header {
+    background-color: black;
+    opacity: 0.8;
 }
 
 nav {
-    background-color: azure;
+    background-color: black;
+    opacity: 0.8;
 }
 
+footer h2 {
+    color: rgb(253, 242, 150);
+}
 
-
+header h1 {
+    color: rgb(117, 124, 240);
+}
+nav a {
+    color: rgb(117, 124, 240);
+}

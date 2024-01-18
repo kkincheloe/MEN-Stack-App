@@ -16,23 +16,27 @@
 
 
         <section class="all-gear">
-            <h2>Our Items</h2>
-            <ul class="item-grid">
+            <h3>Our Items</h3>
+            <div class="container">
+            
                 <% for (let item of items) { %>
                 <li>
                     <figure>
                         <img src="<%= item.photo %>" alt="">
                     </figure>
                     <figcaption>
+                        
                         <div class="item-info">
                             <h3><%= item.name %></h3>
                             <p>Price: $<%= item.price %> </p>
+                        
                         </div>
                         <a href="/items/<%= item._id %>" class="btn">Details</a>
                     </figcaption>
                 </li>
                 <% } %>
-            </ul>
+            
+            </div>
         </section>
     </main>
 

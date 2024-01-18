@@ -10,31 +10,33 @@
     <%- include('./partials/nav.ejs') %>
 
     <section class="customer">
-        <h2>FEATURED</h2>
-        <h3>What's Popular</h3>
+        <h2>Best Selling</h2>
+        
     </section>
 
     <main>
         <section class="listings">
-            <ul>
+            <div class="container">
                 <% for (let item of items) { %>
-                <li>
-                    <figure>
-                        <img src="<%= item.photo %>">
-                        <figcaption>
-                            <h4><%= item.name %></h4>
-                            <p>Price: $<%= item.price %></p>
-                            <p> Quantity:<%= item.quantity %><% if (item.quantity === 0) { %>
-                                <h1 style="color:red;">SOLD OUT</h1>
-                                    <% } else { %>
-                                    <h1 style="color:black;"><%= item.quantity %> </h1>
-                                    <% } %></p>
-                            <a href="/items/<%= item._id %>">Description</a>
-                        </figcaption>
-                    </figure>
-                </li>
+                    <% if (item.isFeatured === true) { %>
+                        <li>
+                            <figure>
+                                <img src="<%= item.photo %>">
+                                <figcaption>
+                                    <h4><%= item.name %></h4>
+                                    <p>Price: $<%= item.price %></p>
+                                    <p> Quantity:<%= item.quantity %><% if (item.quantity === 0) { %>
+                                        <h1 style="color:red;">SOLD OUT</h1>
+                                            <% } else { %>
+                                            <h3 style="color:black;"><%= item.quantity %> </h3>
+                                            <% } %></p>
+                                    <a href="/items/<%= item._id %>">Description</a>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    <% } %>
                 <% } %>
-            </ul>
+                    </div>
         </section>
     </main>
 

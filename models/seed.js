@@ -56,7 +56,7 @@ const items = [
         isFeatured: true,
     },
     {
-        name: "Logitech Gaming Headet",
+        name: "Logitech Gaming Headset",
         price: 150,
         photo: "https://m.media-amazon.com/images/I/71xNjrzG69L._AC_UF894,1000_QL80_.jpg",
         description: "Logitech - G733 LIGHTSPEED Wireless Gaming Headset",
@@ -96,3 +96,4 @@ const items = [
         isFeatured: false,
     },
 ]
+module.exports = items
