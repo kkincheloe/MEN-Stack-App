@@ -29,6 +29,10 @@ router.get('/new', (req, res) => {
     res.render('items/new-review')
 })
 
+router.get('/add', (req, res) => {
+    res.render('items/new-form')
+})
+
 // Show Route GET
 router.get('/:id', function (req, res) {
      db.Item.findById(req.params.id)
@@ -56,9 +60,11 @@ router.get('/:id/buy', (req, res) => {
     })
 
 // Destroy Route DELETE
-router.delete('/:id', (req, res) => {
+router.delete('/:id/delete', (req, res) => {
     db.Item.findByIdAndDelete(req.params.id)
-        .then(() => res.redirect('items'))
+        .then(() => {
+            res.redirect('/items')
+        })
 })
 
 // Edit Route GET

@@ -32,8 +32,8 @@
         <section class="actions">
             <button class="btn"><a href="/reviews/new/<%= item._id %>">Review</a></button>
             <button class="btn"><a href="/items/<%= item._id %>/edit">Edit</a></button>
-            <form method="POST" action="/items/<%= item._id %>?_method=DELETE">
-                <input class="btn" type="submit" value="Delete" />
+            <form method="POST" action="/items/<%= item._id %>/delete?_method=DELETE">
+                <input class="btn" type="submit" value="Delete">
             </form>
             <form method="GET" action="/items/<%- item._id %>/buy">
                 <input class="btn" type="submit" value="Buy">
