@@ -8,7 +8,6 @@ form {
     width: 40%;
     min-width: 300px;
     margin: 0 auto 2rem auto;
-    border: 2px solid black;
 }
 
 label {
@@ -27,7 +26,7 @@ select {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 3px solid rgb(117, 124, 240);
     box-sizing: border-box;
 }
 
@@ -43,10 +42,26 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    align-items: center;
 }
 
 input[type="submit"]:hover {
-    background-color: #fff;
+    background-color: lightblue;
     color: #333;
     border: 1px solid #333;
 }
+
+.customer {
+    background-image: url("https://www.shutterstock.com/image-vector/digital-technology-metaverse-neon-blue-600nw-2260816645.jpg");
+    
+}
+h2 {
+
+    color: rgb(253, 242, 150);
+}
+ h4 {
+    color: rgb(253, 242, 150);
+ }
+ a {
+    color: rgb(253, 242, 150);
+ }
