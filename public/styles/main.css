@@ -44,12 +44,14 @@ h1 a:hover {
 nav ul {
     display: flex;
     list-style: none;
-    width: 90%;
+    align-items: center;
+    justify-content: center;
 }
 
 nav li {
     margin-right: 1rem;
     padding: 0;
+   
 }
 
 nav a {
@@ -83,7 +85,7 @@ nav a {
 
 .btn {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     font-size: 1.2rem;
     background-color: rgb(117, 124, 240);
     color: white;
@@ -91,7 +93,7 @@ nav a {
     border-radius: 10px;
     cursor: pointer;
     width: 110px;
-    margin: 10px;
+    margin: 6px;
 }
 
 .btn:hover {
@@ -162,5 +164,12 @@ header h1 {
 }
 nav a {
     color: rgb(117, 124, 240);
+}
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
 }
 

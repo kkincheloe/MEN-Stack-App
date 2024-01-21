@@ -62,11 +62,6 @@ figcaption {
     background-color: #555;
 }
 
-figure {
-    box-sizing: border-box;
-    height: 400px;
-
-}
 
 img {
     width: 300px;
