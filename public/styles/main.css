@@ -56,6 +56,8 @@ nav li {
 
 nav a {
     font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .customer {
@@ -152,7 +154,7 @@ header {
 nav {
     background-color: black;
     opacity: 0.8;
-    width: 90%;
+    
 }
 
 footer h2 {
