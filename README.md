@@ -20,7 +20,7 @@
 <h4>Learn about our company and what we do by reading our about page!</h4>
 
 <h2>Technologies Used</h2>
-<h4>EJS, JS, JSON and CSS</h4>
+<h4>EJS, Node.js, Mongoose, MongoDB, JSON, and CSS</h4>
 
 <h2>Installation Instructions</h2>
 <h4>npm init -y</h4>

@@ -1,52 +1,13 @@
-.about {
-    background-color: #fff;
-    padding: 2rem;
-}
-
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.about p {
-    margin-bottom: 1rem;
-}
-
-.product-grid {
-    display: grid; /* Change from flex to grid */
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    grid-template-rows: repeat(3, 1fr); /* 3 rows */
-    gap: 20px; /* Adjust the gap as needed */
-    list-style: none;
-    margin-top: 2rem;
-}
-
-
 figure {
-    height: 70%;
-}
-
-.row { 
-    display: table;
-}
-.column {
-    grid-row: 1 / 2;
+    height: 300px;
 }
 
 figcaption {
-    height: auto; /* Adjust the height as needed */
+    height: auto; 
     padding: 1rem 2rem 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.featured-info h3 {
-    font-size: calc(1em + 0.5vw);
-}
-
-.featured-info p {
-    font-size: calc(0.5rem + 0.5vw);
 }
 
 .customer {
@@ -59,21 +20,9 @@ figcaption {
     }
 }    
 
-
-
-.about {
-    text-align: center;
-}
-
 header {
     background-color: black;
     opacity: 0.8;
-}
-
-nav {
-    background-color: black;
-    opacity: 0.8;
-    background-size: cover;
 }
 
 body {
@@ -118,6 +67,30 @@ h3 {
     border-radius: 10px;
 
 }
-  
-  /* You may need to adjust the styles further based on your design requirements. */
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(4, 1fr); 
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-rows: repeat(12, 1fr); 
+    }
+    .customer {
+        background-position: 0, 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
   

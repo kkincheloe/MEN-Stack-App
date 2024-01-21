@@ -5,9 +5,10 @@
 }
 
 form {
-    width: 40%;
+    width: 75px;
     min-width: 300px;
     margin: 0 auto 2rem auto;
+
 }
 
 label {
@@ -16,10 +17,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="email"],
-input[type="tel"],
+input,
 textarea,
 select {
     width: 100%;

@@ -1,8 +1,8 @@
 div {
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto;
     text-align: center;
-    
+    max-height: 100%;
     padding: 20px;
     margin: 4vh auto;
     
@@ -17,10 +17,7 @@ img {
     margin-bottom: 10px;
 }
 .photo {
-    margin-right: 20px;
-    margin-left: 200px;
-    
-   
+    justify-content: center;
 }
 
 .item-name {
@@ -43,19 +40,26 @@ strong {
     font-weight: bold;
 }
 
-.featured {
-    background-color: #ffd700;
-}
 
 .actions {
     margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .btn a {
     color: white;
     text-decoration: none;
-    
+    width: 50px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 480px) {
+    .actions {
+        align-items: center;
+        justify-content: center;
+    }
 }

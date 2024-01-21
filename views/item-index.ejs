@@ -19,10 +19,10 @@
             <div class="container">
                 <% for (let item of items) { %>
                     <% if (item.isFeatured === true) { %>
-                        <li>
-                            <figure>
+                        <li class="display-flex">
+                            <div>
                                 <img src="<%= item.photo %>">
-                                <figcaption>
+                                <div>
                                     <h4><%= item.name %></h4>
                                     <p>Price: $<%= item.price %></p>
                                     <p> Quantity:<%= item.quantity %><% if (item.quantity === 0) { %>
@@ -30,9 +30,10 @@
                                             <% } else { %>
                                             <h3 style="color:black;"><%= item.quantity %> </h3>
                                             <% } %></p>
-                                    <a href="/items/<%= item._id %>">Description</a>
-                                </figcaption>
-                            </figure>
+                                    
+                                            </div>
+                                        </div>
+                            <a href="/items/<%= item._id %>">Details</a>
                         </li>
                     <% } %>
                 <% } %>

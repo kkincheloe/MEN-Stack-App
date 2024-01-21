@@ -1,14 +1,14 @@
 main {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: lightgray;
+    padding: 75px;
+    background-color: rgb(117, 124, 240);
 }
 
 
 .content {
     margin-top: 50px;
-    line-height: 1.5;
+    line-height: 2;
     text-align: center;
 }
 
@@ -19,19 +19,6 @@ main {
 
 .content p {
     margin-bottom: 20px;
-}
-
-.content ul {
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-.content li:before {
-    content: "✓ ";
-    color: #004080;
-    font-weight: bold;
-    margin-right: 10px;
 }
 
 .customer {

@@ -44,10 +44,12 @@ h1 a:hover {
 nav ul {
     display: flex;
     list-style: none;
+    width: 90%;
 }
 
-nav li:not(:last-child) {
+nav li {
     margin-right: 1rem;
+    padding: 0;
 }
 
 nav a {
@@ -96,7 +98,6 @@ nav a {
     background-color: lightblue;
 }
 
-/* Simplified grid styles */
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -105,14 +106,13 @@ nav a {
 
 .container li {
     list-style: none;
-    text-align: center; /* Added text-align to center the content */
+    text-align: center; 
 }
 
 .item-info {
     text-align: center;
 }
 
-/* The rest of your CSS remains unchanged */
 footer {
     text-align: center;
     padding: 1rem;
@@ -150,6 +150,7 @@ header {
 nav {
     background-color: black;
     opacity: 0.8;
+    width: 90%;
 }
 
 footer h2 {
@@ -162,3 +163,4 @@ header h1 {
 nav a {
     color: rgb(117, 124, 240);
 }
+
