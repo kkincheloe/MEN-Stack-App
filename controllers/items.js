@@ -46,7 +46,6 @@ router.put('/:id', (req, res) => {
     db.Item.findByIdAndUpdate(
         req.params.id,
         req.body,
-        { new: true }
     )
         .then(item => res.redirect('/items/' + item._id))
 })
