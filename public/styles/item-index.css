@@ -118,12 +118,34 @@ h2 {
     font-size: 16px;
 }
 
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(5, 1fr); 
+    }
+    .customer {
+        background-position: 0, 0;
+        
+    }
+}
 
+@media screen and (max-width: 820px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+    }
+    .customer {
+        background-position: 0, 0;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .container {
-        grid-template-columns: repeat(3, 1fr); 
-        grid-template-rows: repeat(4, 1fr); 
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+    }
+    .customer {
+        background-position: 0, 0;
     }
 }
 
